@@ -2,7 +2,7 @@ let word = '';
 
 // Function to get words from the JSON file using Fetch API
 function getWordJSON() {
-    return fetch('/scripts/data/words.json')
+    return fetch('/Hangman/scripts/data/words.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
