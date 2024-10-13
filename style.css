@@ -260,3 +260,68 @@ body.dark-mode .win-screen h2,
 body.dark-mode .win-screen p {
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .hangman {
+        height: 200px;
+        width: 150px;
+    }
+
+    .hangman .head {
+        height: 40px;
+        width: 40px;
+    }
+
+    .hangman .body {
+        height: 80px;
+    }
+
+    .hangman .left-arm,
+    .hangman .right-arm {
+        height: 40px;
+        top: 90px;
+    }
+
+    .hangman .left-leg,
+    .hangman .right-leg {
+        height: 40px;
+        top: 160px;
+    }
+
+    .word {
+        margin-top: 10px;
+    }
+
+    .letter {
+        height: 40px;
+        width: 40px;
+        font-size: 25px;
+    }
+
+    .win-screen h2 {
+        font-size: 2.5rem;
+    }
+
+    .win-screen hr {
+        width: 60%;
+        height: 3px;
+    }
+
+    .win-screen p {
+        font-size: 1.2rem;
+    }
+
+    .win-screen .scores li h2 {
+        font-size: 1.2rem;
+    }
+
+    .win-screen .scores li p {
+        font-size: .8rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+}

@@ -73,12 +73,21 @@ footer .keyboard .key svg {
         font-size: 1rem;
     }
 
-    footer .keyboard .key button {
-        font-size: 1rem;
-        padding: 10px 15px;
+    footer .keyboard .row {
+        margin: -10px;
     }
 
-    footer .keyboard .key svg {
+    footer .keyboard .key {
+        margin: 2px;
+        
+    }
+
+    footer .keyboard .key button {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    footer .keyboard .key svg { 
         width: 30px;
         height: 30px;
     }
