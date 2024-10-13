@@ -1,0 +1,85 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+footer .keyboard .row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+footer .keyboard .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+footer .keyboard .key button {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+
+    border: none;
+    outline: none;
+
+    background-color: #555;
+    border-radius: 5px;
+    padding: 15px 20px;
+
+    height: 70px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer .keyboard .key button.correct {
+    background-color: #15bb15;
+}
+
+footer .keyboard .key button.incorrect {
+    opacity: 0.5;
+}
+
+footer .keyboard .key button:hover {
+    background-color: #999;
+}
+
+footer .keyboard .key svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+@media (max-width: 768px) {
+    footer .keyboard {
+        font-size: 1rem;
+    }
+
+    footer .keyboard .key button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    footer .keyboard .key svg {
+        width: 30px;
+        height: 30px;
+    }
+}

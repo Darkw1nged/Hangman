@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="keyboard.css">
+</head>
+<body class="dark-mode">
+
+    <section class="game-board">
+        <div class="hangman">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="left-arm"></div>
+            <div class="right-arm"></div>
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+        </div>
+        <div class="word"></div>
+    </section>
+
+    <section class="win-screen">
+        <h2>Congratulations!</h2>
+        <hr>
+    
+        <p class="win-word"></p>
+        <p class="lives-remaining"></p>
+
+        <button id="play-again" onClick="restartGame()">Play Again</button>
+    </section>
+
+    <footer>
+        <div class="keyboard"></div>
+    </footer>
+
+
+
+    <!-- <script src="scripts/grid.js"></script> -->
+    <script src="scripts/wordGeneration.js"></script>
+    <script src="scripts/keyboard.js"></script>
+    <script src="scripts/gameLogic.js"></script>
+    <script src="scripts/main.js"></script>
+    
+</body>
+</html>
