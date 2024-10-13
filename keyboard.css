@@ -1,18 +1,6 @@
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 footer .keyboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    font-size: 1.5rem;
+    max-width: 720px;
 }
 
 footer .keyboard .row {
@@ -55,11 +43,21 @@ footer .keyboard .key button.correct {
 }
 
 footer .keyboard .key button.incorrect {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 footer .keyboard .key button:hover {
     background-color: #999;
+}
+
+footer .keyboard .key button.correct:hover {
+    background-color: #15bb15;
+    cursor: default;
+}
+
+footer .keyboard .key button.incorrect:hover {
+    background-color: #555;
+    cursor: default;
 }
 
 footer .keyboard .key svg {
@@ -70,25 +68,31 @@ footer .keyboard .key svg {
 
 @media (max-width: 768px) {
     footer .keyboard {
-        font-size: 1rem;
+        max-width: 100%;
+        padding: 10px;
     }
 
     footer .keyboard .row {
-        margin: -10px;
+        margin-bottom: 4px;
     }
 
     footer .keyboard .key {
         margin: 2px;
-        
     }
 
     footer .keyboard .key button {
-        font-size: 1rem;
-        padding: 14px;
+        font-size: 1.3rem;
+        padding: 8px 10px;
+        height: 45px;
     }
 
-    footer .keyboard .key svg { 
-        width: 30px;
-        height: 30px;
+    footer .keyboard .key svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    footer .keyboard .key.button-enter,
+    footer .keyboard .key.button-backspace {
+        flex-grow: 1.5;
     }
 }

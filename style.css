@@ -20,6 +20,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .letter {
@@ -183,13 +184,7 @@ body {
     margin-bottom: 5px;
 }
 
-win-screen .scores li p {
-    font-size: .9rem;
-    color: white;
-}
-
-
-button {
+.win-screen button {
     padding: 12px 24px;
     font-size: 1.2rem;
     color: white;
@@ -202,11 +197,11 @@ button {
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-button:hover {
+.win-screen button:hover {
     background-color: #2980b9;
 }
 
-button:active {
+.win-screen button:active {
     transform: translateY(2px);
 }
 
@@ -293,8 +288,8 @@ body.dark-mode .win-screen p {
     }
 
     .letter {
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         font-size: 25px;
     }
 
