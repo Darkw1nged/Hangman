@@ -5,38 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="keyboard.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/menus.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/keyboard.css">
+
 </head>
 <body class="dark-mode">
 
-    <section class="game-board">
-        <div class="loading"></div>
+    <header>
+        <h1>Welcome to <strong>Hangman</strong></h1>
+        <p>Kick back, expand your knowledge, and have some fun!</p>
+    </header>
 
-        <div class="hangman">
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="left-arm"></div>
-            <div class="right-arm"></div>
-            <div class="left-leg"></div>
-            <div class="right-leg"></div>
-        </div>
-        <div class="word"></div>
+    <section class="difficulties">
+        <h2>Choose a difficulty:</h2>
+
+        <ul>
+            <li><button id="easy" onClick="setDifficulty('easy')">Easy</button></li>
+            <li><button id="medium" onClick="setDifficulty('medium')">Medium</button></li>
+            <li><button id="hard" onClick="setDifficulty('hard')">Hard</button></li>
+            <li><button id="expert" onClick="setDifficulty('expert')">Expert</button></li>
+        </ul>
     </section>
 
-    <section class="win-screen">
-        <h2>Congratulations!</h2>
-        <hr>
-    
-        <p class="win-word"></p>
-        <p class="lives-remaining"></p>
-
-        <button id="play-again" onClick="restartGame()">Play Again</button>
+    <section class="categories">
+        <h2>Choose a category:</h2>
+        <ul class="category-list"></ul>
+        <button onClick="back()">Back</button>
     </section>
 
-    <footer>
-        <div class="keyboard"></div>
-    </footer>
+    <section class="game">
+        <section class="game-board">
+            <div class="loading"></div>
+
+            <div class="hangman-container">
+                <div class="pole">
+                    <div class="rope"></div>
+                    <div class="top"></div>
+                    <div class="support"></div>
+                    <div class="post"></div>
+                </div>
+            
+                <div class="hangman">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="left-arm"></div>
+                    <div class="right-arm"></div>
+                    <div class="left-leg"></div>
+                    <div class="right-leg"></div>
+                </div>
+            </div>
+
+            <div class="word"></div>
+            <div class="hint"></div>
+        </section>
+        
+        <section class="win-screen">
+            <h2>Congratulations!</h2>
+            <hr>
+        
+            <p class="win-word"></p>
+            <p class="lives-remaining"></p>
+        
+            <button id="play-again" onClick="restartGame()">Play Again</button>
+        </section>
+        
+        <footer>
+            <div class="keyboard"></div>
+        </footer>
+    </section>
 
     <script src="scripts/wordGeneration.js"></script>
     <script src="scripts/keyboard.js"></script>

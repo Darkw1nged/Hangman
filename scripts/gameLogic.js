@@ -1,6 +1,3 @@
-let lives = 6;
-let guessedLetters = [];
-
 // Function to handle keydown events
 function handleKeydown(event) {
     const key = event.key.toLowerCase(); 
@@ -9,8 +6,6 @@ function handleKeydown(event) {
     if (key >= 'a' && key <= 'z') {
         // console.log('Key pressed:', key);
         checkLetter(key);
-    } else {
-        // console.log('Invalid key pressed:', key);
     }
 }
 
@@ -89,7 +84,13 @@ function markCorrectLetter(letter) {
 
 function checkWordCompletion() {
     const letters = document.querySelectorAll('.letter');
-    const wordComplete = [...letters].every(letterDiv => letterDiv.textContent !== '');
+    
+    // Check if all letter divs are filled or if they are spaces
+    const wordComplete = [...letters].every((letterDiv, index) => {
+        const letterContent = letterDiv.textContent;
+        // Assuming your words may include spaces, check if the corresponding word character is a space
+        return letterContent !== '' || (word[index] === ' ' && letterContent === '');
+    });
     
     if (wordComplete) {
         gameOver(true);

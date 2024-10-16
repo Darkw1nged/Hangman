@@ -1,0 +1,79 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Animals & Insects",
+            "disabled": false
+        },
+        {
+            "id": 2,
+            "name": "Countries",
+            "disabled": false
+        },
+        {
+            "id": 3,
+            "name": "Sports",
+            "disabled": false
+        },
+        {
+            "id": 4,
+            "name": "Movies",
+            "disabled": false
+        },
+        {
+            "id": 5,
+            "name": "Famous People",
+            "disabled": true
+        },
+        {
+            "id": 6,
+            "name": "Food & Drink",
+            "disabled": true
+        },
+        {
+            "id": 7,
+            "name": "Music",
+            "disabled": true
+        },
+        {
+            "id": 8,
+            "name": "History",
+            "disabled": true
+        },
+        {
+            "id": 9,
+            "name": "Technology",
+            "disabled": true
+        },
+        {
+            "id": 10,
+            "name": "General Knowledge",
+            "disabled": true
+        },
+        {
+            "id": 11,
+            "name": "Vehicles",
+            "disabled": true
+        },
+        {
+            "id": 12,
+            "name": "Games",
+            "disabled": true
+        },
+        {
+            "id": 13,
+            "name": "Cities & Places",
+            "disabled": true
+        },
+        {
+            "id": 14,
+            "name": "Books",
+            "disabled": true
+        },
+        {
+            "id": 15,
+            "name": "Mythology & Folklore",
+            "disabled": true
+        }
+    ]
+}
