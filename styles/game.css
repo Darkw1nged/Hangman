@@ -34,7 +34,7 @@ section.game {
 }
 
 .letter.space {
-    border: none;
+    border: none !important;
 }
 
 .hangman-container {
