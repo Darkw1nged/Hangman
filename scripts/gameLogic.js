@@ -2,6 +2,25 @@
 function handleKeydown(event) {
     const key = event.key.toLowerCase(); 
 
+    const ignoredKeysSet = new Set([
+        'escape', 'tab', 'capslock', 'shift', 'control', 'alt', 'meta', 'fn', 'clear', 'help',
+        'backspace', 'enter', 'arrowup', 'arrowdown', 'arrowleft', 'arrowright',
+        'pageup', 'pagedown', 'end', 'home', 'insert', 'delete',
+        'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12',
+        'numlock', 'scrolllock', 'pause', 'printscreen', 'audiovolumeup', 'audiovolumedown', 'audiomute', 
+        'mediastop', 'mediaplaypause', 'mediatrackprevious', 'mediatracknext',
+        'brightnessup', 'brightnessdown', 'eject', 'sleep', 'wake', 'power', 
+        'launchmail', 'launchapp1', 'launchapp2', 'launchcalculator', 'launchcalendar',
+        'convert', 'nonconvert', 'kana', 'kanji', 'os', 'altgraph',
+        'volumeup', 'volumedown', 'volumemute', 'contextmenu',
+        'numpad0', 'numpad1', 'numpad2', 'numpad3', 'numpad4', 'numpad5', 'numpad6', 'numpad7', 'numpad8', 'numpad9',
+        'numpadadd', 'numpadsubtract', 'numpadmultiply', 'numpaddivide', 'numpadenter', 'numpaddecimal'
+    ]);
+
+    if (ignoredKeysSet.has(key)) {
+        return;
+    }
+
     // Check if the key is a letter from 'a' to 'z'
     if (key >= 'a' && key <= 'z') {
         // console.log('Key pressed:', key);
@@ -93,6 +112,7 @@ function checkWordCompletion() {
     });
     
     if (wordComplete) {
+        storeWord(word, category);
         gameOver(true);
     }
 }

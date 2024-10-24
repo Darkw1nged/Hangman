@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const event = new KeyboardEvent('keydown', { key: 'Backspace' });
             document.dispatchEvent(event);
         } else {
-            const event = new KeyboardEvent('keydown', { key: key });
+            const event = new KeyboardEvent('keydown', { key });
             document.dispatchEvent(event);
         }
     }
