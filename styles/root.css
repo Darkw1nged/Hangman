@@ -48,6 +48,24 @@ header hr {
     margin: 1rem auto;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
 @media (max-width: 768px) {
     body {
         max-height: 95vh;

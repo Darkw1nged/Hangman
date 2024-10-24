@@ -54,6 +54,70 @@ function generateCategoryList() {
     });
 }
 
+async function generateFoundWordList() {
+    const foundWordSection = document.querySelector('.words-found');
+    const foundWordList = foundWordSection.querySelector('.found-words-list');
+    foundWordList.innerHTML = ''; // Clear the list
+
+    try {
+        const categories = await getCatrgoryJSON();
+
+        // Fetch all data in parallel
+        const promises = categories.map(async category => {
+            if (category.disabled) return;
+
+            const [foundWords, wordsJSON] = await Promise.all([
+                getFoundWords(category.id),
+                getWordJSON(category.id)
+            ]);
+
+            // Create category container and heading
+            const categoryContainer = document.createElement('li');
+            const containerHeading = document.createElement('h3');
+            containerHeading.innerHTML = `${category.name} (${foundWords[1]}/${wordsJSON.length})`;
+            const underline = document.createElement('hr');
+
+            // Create the words container
+            const wordsContainer = document.createElement('div');
+            wordsContainer.classList.add("words");
+
+            // Build all words for this category
+            const fragment = document.createDocumentFragment();
+            wordsJSON.forEach(wordObj => {
+                const item = document.createElement('div');
+                item.classList.add('word');
+                item.innerHTML = foundWords[0].includes(wordObj.word)
+                    ? wordObj.word.charAt(0).toUpperCase() + wordObj.word.slice(1)
+                    : wordObj.word.replaceAll(/[a-zA-Z]/g, '?');
+
+                if (foundWords[0].includes(wordObj.word)) {
+                    item.classList.add('found');
+                }
+
+                fragment.appendChild(item);
+            });
+
+            wordsContainer.appendChild(fragment); // Append all words at once
+
+            // Append everything to the category container
+            categoryContainer.appendChild(containerHeading);
+            categoryContainer.appendChild(underline);
+            categoryContainer.appendChild(wordsContainer);
+
+            return categoryContainer;
+        });
+
+        const categoryContainers = await Promise.all(promises);
+        categoryContainers.forEach(container => {
+            if (container) foundWordList.appendChild(container);
+        });
+
+    } catch (error) {
+        console.error('Error generating found word list:', error);
+    }
+}
+
+
 function generateWord(category) {
     showLoading();
 

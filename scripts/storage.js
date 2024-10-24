@@ -21,3 +21,12 @@ function storeWord(word, category) {
     localStorage.setItem('words', JSON.stringify(words));
     console.log('Word stored:', word);
 }
+
+function getFoundWords(category) {
+    if (!localStorage.getItem('words')) return;
+
+    const words = JSON.parse(localStorage.getItem('words'));
+    if (!words[category]) words[category] = { found: [], total: 0 };
+
+    return [words[category].found, words[category].total];
+}

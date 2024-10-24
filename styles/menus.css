@@ -121,12 +121,16 @@ section.words-found ul {
     justify-content: center;
     gap: 15px;
     padding: 0;
+
+    max-height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 section.words-found ul li {
     display: flex;
     flex-direction: column;
-    width: 75vw;
+    width: 50vw;
 }
 
 section.words-found ul li h3 {
@@ -152,6 +156,11 @@ section.words-found ul li .words {
     justify-content: center;
     gap: 15px;
     padding: 0;
+
+    max-height: 17vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 section.words-found ul li .words .word {
@@ -199,6 +208,12 @@ section .back_button:hover {
     background-color: #333;
 }
 
+@media (max-width: 1280px) {
+    section.words-found ul li {
+        width: 75vw;
+    }
+}
+
 @media (max-width: 768px) {
     section.difficulties h2 {
         font-size: 1.2rem;
@@ -234,6 +249,22 @@ section .back_button:hover {
 
     section.categories button {
         padding: 8px 16px;
+    }
+
+    section.words-found ul li {
+        width: 90vw;
+    }
+
+    section.words-found ul li hr {
+        width: 80vw;
+    }
+
+    section.words-found ul li h2 {
+        font-size: 1.2rem;
+    }
+
+    section.words-found ul li .words .word {
+        font-size: .8rem;
     }
     
 }

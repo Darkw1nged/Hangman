@@ -2,7 +2,7 @@ section.game {
     display: none;
 }
 
-.word {
+section.game .word {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ section.game {
     text-transform: uppercase;
 }
 
-.letter.space {
+section.game .letter.space {
     border: none !important;
 }
 
@@ -83,7 +83,7 @@ section.game {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 28vh;
+    top: 35.5vh;
     margin-left: 30px;
 }
 

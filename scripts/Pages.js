@@ -4,12 +4,6 @@ function showPage(page) {
         // console.log(p, page);
         document.querySelector(`.${p}`).style.display = (p === page) ? 'block' : 'none';
     });
-
-    if (page) {
-        window.history.pushState({ page: page }, '', `/${page}`);
-    } else {
-        window.history.pushState({}, '', '/');
-    }
 }
 
 // Use the showPage function in your existing methods
@@ -23,6 +17,7 @@ function back() {
 
 function showWordsFoundPage() {
     showPage('words-found');
+    generateFoundWordList();
 }
 
 function showGamePage() {
