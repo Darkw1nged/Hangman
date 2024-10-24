@@ -28,12 +28,50 @@
             <li><button id="hard" onClick="setDifficulty('hard')">Hard</button></li>
             <li><button id="expert" onClick="setDifficulty('expert')">Expert</button></li>
         </ul>
+
+        <button class="link" onClick="showWordsFoundPage()">View Found Words</button>
+    </section>
+
+    <section class="words-found">
+        <h2>Found Words:</h2>
+        <ul class="found-words-list">
+            <li>
+                <h3>Sports:</h3>
+                <hr>
+                
+                <div class="words">
+                    <div class="word found">soccer</div>
+                    <div class="word found">basketball</div>
+                    <div class="word">??????</div>
+                    <div class="word">????????</div>
+                    <div class="word">???????</div>
+                    <div class="word">????</div>
+                    <div class="word">?????</div>
+                    <div class="word">hockey</div>
+                    <div class="word">volleyball</div>
+                    <div class="word">boxing</div>
+                    <div class="word">swimming</div>
+                    <div class="word">cycling</div>
+                    <div class="word">wrestling</div>
+                    <div class="word">skiing</div>
+                    <div class="word">surfing</div>
+                    <div class="word">badminton</div>
+                    <div class="word">table</div>
+                    <div class="word">archery</div>
+                    <div class="word">fencing</div>
+                    <div class="word">karate</div>
+                </div>
+            </li>
+
+
+        </ul>
+        <button class="back_button" onClick="back()">Back</button>
     </section>
 
     <section class="categories">
         <h2>Choose a category:</h2>
         <ul class="category-list"></ul>
-        <button onClick="back()">Back</button>
+        <button class="back_button" onClick="back()">Back</button>
     </section>
 
     <section class="game">
@@ -77,6 +115,8 @@
         </footer>
     </section>
 
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/Pages.js"></script>
     <script src="scripts/wordGeneration.js"></script>
     <script src="scripts/keyboard.js"></script>
     <script src="scripts/gameLogic.js"></script>

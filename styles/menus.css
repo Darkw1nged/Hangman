@@ -45,6 +45,23 @@ section.difficulties ul li button:hover {
     background-color: #333;
 }
 
+section.difficulties button.link {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section.difficulties button:hover {
+    background-color: #2980b9;
+}
+
 section.categories {
     display: none;
     width: 40%;
@@ -86,7 +103,86 @@ section.categories ul li.category-item:hover {
     transform: translateY(-3px);
 }
 
-section.categories button {
+section.words-found {
+    display: none;
+}
+
+section.words-found h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+section.words-found ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+section.words-found ul li {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+}
+
+section.words-found ul li h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+section.words-found ul li hr {
+    height: 3px;
+    width: 50%;
+    margin-bottom: 10px;
+
+    border: none;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+section.words-found ul li .words {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+section.words-found ul li .words .word {
+    color: #333;
+    font-size: .9rem;
+    
+    background-color: #3498db;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    cursor: default;
+    opacity: .2;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+section.words-found ul li .words .word.found {
+    background-color: #3498db;
+    color: #ffffff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+section.words-found ul li .words .word.found:hover {
+    background-color: #2980b9;
+}
+
+section .back_button {
     display: block;
     margin: 30px auto 0;
     padding: 10px 20px;
@@ -99,7 +195,7 @@ section.categories button {
     transition: background-color 0.3s ease;
 }
 
-section.categories button:hover {
+section .back_button:hover {
     background-color: #333;
 }
 
