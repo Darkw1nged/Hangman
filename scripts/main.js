@@ -13,11 +13,6 @@ function hideLoading() {
     document.querySelector('.loading').style.display = 'none';
 }
 
-function back() {
-    document.querySelector('.categories').style.display = 'none';
-    document.querySelector('.difficulties').style.display = 'block';
-}
-
 function restartGame() {
     word = '';
     clue = '';
@@ -42,24 +37,16 @@ function restartGame() {
     document.querySelector('.win-screen').style.display = 'none';
 }
 
-function goHome() {
-    document.querySelector('.game').style.display = 'none';
-    document.querySelector('.difficulties').style.display = 'none';
-}
-
 function setDifficulty(diff) {
     difficulty = diff;
 
-    document.querySelector('.difficulties').style.display = 'none';
-    document.querySelector('.categories').style.display = 'block';
+    showCategoriesPage();
     generateCategoryList();
 }
 
 function setCategory(cat) {
     category = cat;
-    
-    document.querySelector('.categories').style.display = 'none';
-    document.querySelector('.difficulties').style.display = 'none';
-    document.querySelector('.game').style.display = 'block';
+
+    showGamePage();
     generateWord(cat);
 }

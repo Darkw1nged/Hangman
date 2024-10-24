@@ -83,8 +83,8 @@ section.game {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 34.3vh;
-    margin-left: 33px;
+    top: 28vh;
+    margin-left: 30px;
 }
 
 .hangman .head {
