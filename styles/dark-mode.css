@@ -9,7 +9,7 @@ body.dark-mode h1 {
 }
 
 body.dark-mode h2 {
-    color: #6666 !important;
+    color: #6666;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1);
 }
 

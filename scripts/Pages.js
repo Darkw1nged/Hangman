@@ -11,8 +11,8 @@ function goHome() {
     showPage('difficulties');
 }
 
-function back() {
-    showPage('difficulties');
+function back(page = 'difficulties') {
+    showPage(page);
 }
 
 function showWordsFoundPage() {

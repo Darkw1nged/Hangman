@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="styles/dark-mode.css">
     <link rel="stylesheet" href="styles/root.css">
+    <link rel="stylesheet" href="styles/notification.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/menus.css">
     <link rel="stylesheet" href="styles/game.css">
     <link rel="stylesheet" href="styles/keyboard.css">
@@ -18,6 +20,8 @@
         <h1>Welcome to <strong>Hangman</strong></h1>
         <p>Kick back, expand your knowledge, and have some fun!</p>
     </header>
+
+    <section class="notifications"></section>
 
     <section class="difficulties">
         <h2>Choose a difficulty:</h2>
@@ -83,9 +87,13 @@
         <footer>
             <div class="keyboard"></div>
         </footer>
+
+        <button class="back_button" onClick="back('categories')">Back</button>
     </section>
 
     <script src="scripts/storage.js"></script>
+    <script src="scripts/notification.js"></script>
+
     <script src="scripts/Pages.js"></script>
     <script src="scripts/wordGeneration.js"></script>
     <script src="scripts/keyboard.js"></script>

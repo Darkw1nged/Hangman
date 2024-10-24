@@ -17,6 +17,7 @@ function storeWord(word, category) {
 
     words[category].found.push(word);
     words[category].total++;
+    showNotification(word)
 
     localStorage.setItem('words', JSON.stringify(words));
     console.log('Word stored:', word);

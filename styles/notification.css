@@ -1,0 +1,68 @@
+.notifications {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    box-shadow: none;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 9999;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    height: 65px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px;
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.5s forwards;
+
+    border-right: 5px solid #61b5fa;
+    margin-bottom: 10px;
+}
+
+.type-name {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.type-name h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #61b5fa !important; 
+}
+
+.type-name span {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+    margin-right: 10px;
+}
+
+.value p {
+    font-family: 'ds-digital', sans-serif;
+}
+
+.value p.fade {
+    background: linear-gradient(to left, rgba(255, 255, 255, .6), #212121 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

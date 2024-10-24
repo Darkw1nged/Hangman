@@ -147,7 +147,8 @@ function generateWordDivs(word) {
         return;
     }
 
-    const wordDiv = document.querySelector('.word');
+    const gameBoard = document.querySelector('.game-board');
+    const wordDiv = gameBoard.querySelector('.word');
     wordDiv.innerHTML = '';
 
     for (let i = 0; i < word.length; i++) {
